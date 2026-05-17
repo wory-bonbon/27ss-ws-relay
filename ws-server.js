@@ -11,6 +11,18 @@ const MESSAGE_SCHEMA = {
       material: ['A', 'B', 'C'],
     },
   },
+  pattern: {
+    fields: ['pattern'],
+    validate: {
+      pattern: [
+        'none',
+        'pattern_02_shell_BE',
+        'pattern_03_shell_SA',
+        'pattern_04_brush_NV',
+        'pattern_05_botanical',
+      ],
+    },
+  },
 };
 
 const wss = new WebSocketServer({ port: PORT });
